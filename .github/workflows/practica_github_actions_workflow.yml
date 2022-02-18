@@ -83,9 +83,10 @@ jobs:
       
       - uses: actions/checkout@v2
       - run: npm install nodemailer
+
       - uses: ./.github/actions/send_email
         with:
-          GMAIL_PASS: ${{ secrets.POSTMAIL_SECRET }}
+          GMAIL_PASS: ${{ secrets.GMAIL_PASS }}
           RES_LINT: ${{ needs.linterJob.result }}
           RES_TEST: ${{ needs.badgeJob.result }}
           RES_UPDATE: ${{ needs.badgeJob.result }}
