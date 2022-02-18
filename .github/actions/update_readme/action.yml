@@ -7,8 +7,3 @@ inputs:
 runs:
   using: 'node12'
   main: 'dist/index.js'
-  steps:
-    - id: pruebas
-      run: |
-          npm i -g @vercel/ncc
-          ncc build index.js
