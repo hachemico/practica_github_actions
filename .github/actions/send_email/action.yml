@@ -1,0 +1,17 @@
+name: 'sendMail'
+inputs:
+  GMAIL_PASS:
+    required: true
+  RES_LINT:
+    required: true
+  RES_TEST:
+    required: true
+  RES_UPDATE:
+    required: true
+  RES_DEPLOY:
+    required: true
+  EMAIL_NOTIF:
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

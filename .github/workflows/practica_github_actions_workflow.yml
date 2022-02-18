@@ -74,4 +74,19 @@ jobs:
           vercel-token: ${{ secrets.VTOKEN }}
           vercel-org-id: ${{ secrets.VID}}
           vercel-project-id: ${{ secrets.VPROJECT}}
-          
+
+  notificationJob:
+    needs: [linterJob, cypressJob, badgeJob, deployjob]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/sendMail
+        with:
+          GMAIL_PASS: ${{ secrets.POSTMAIL_SECRET }}
+          RES_LINT: ${{ needs.linterJob.result }}
+          RES_TEST: ${{ needs.badgeJob.result }}
+          RES_UPDATE: ${{ needs.badgeJob.result }}
+          RES_DEPLOY: ${{ needs.deployJob.result }}
+          EMAIL_NOTIF: ${{secrets.TOEMAIL}}
