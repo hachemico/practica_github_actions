@@ -82,7 +82,7 @@ jobs:
     steps:
       
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/sendMail
+      - uses: ./.github/actions/send_email
         with:
           GMAIL_PASS: ${{ secrets.POSTMAIL_SECRET }}
           RES_LINT: ${{ needs.linterJob.result }}
