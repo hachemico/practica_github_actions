@@ -12,7 +12,7 @@ fs.readFile('README.md', 'utf-8', (err,data) => {
     }
     const markdownUpdate = data.replace(
         /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm,
-        testResult == 'success' ? successBadge : failedBadge
+        testResult !== 'success' ? successBadge : failedBadge
         
     )
     fs.writeFile('README.md', markdownUpdate, 'utf-8', (err) => {
