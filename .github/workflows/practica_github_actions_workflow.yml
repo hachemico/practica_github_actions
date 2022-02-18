@@ -36,7 +36,7 @@ jobs:
           name: result.txt
           path: result.txt
 
-    badgeJob:
+  badgeJob:
       runs-on: ubuntu-latest
       if: always()
       needs: cypressJob
