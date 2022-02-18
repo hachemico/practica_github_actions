@@ -47,15 +47,16 @@ jobs:
             name: result.txt
 
         - id: cypressTest
-          run: echo "::set-output name=cypressOutcome::$(cat result.txt)"
-        
+          run: |
+              echo "::set-output name=cypressOutcome::$(cat result.txt)"
+              npm install @actions/core
+
         - uses: ./.github/actions/update_readme/
           id: readme
           with:
             cypressTest: ${{ steps.cypressTest.outputs.cypressOutcome }}
         
         - run: | 
-              npm install @actions/core
               git config user.email "hachemico@gmail.com"
               git config user.name "hachemico"
               git pull
