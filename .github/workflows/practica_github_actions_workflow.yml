@@ -82,6 +82,7 @@ jobs:
     steps:
       
       - uses: actions/checkout@v2
+      - run: npm install nodemailer
       - uses: ./.github/actions/send_email
         with:
           GMAIL_PASS: ${{ secrets.POSTMAIL_SECRET }}
