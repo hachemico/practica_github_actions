@@ -64,3 +64,13 @@ jobs:
               git commit --allow-empty -m "Readme" 
               git remote set-url origin https://hachemico:${{ secrets.GH_TOKEN }}@github.com/hachemico/practica_github_actions.git
               git push  
+  deployJob:
+    needs: cypressJob
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VTOKEN }}
+          vercel-org-id: ${{ secrets.VID}}
+          vercel-project-id: ${{ secrets.VPROJECT}}
