@@ -11,7 +11,6 @@ let EMAIL_NOTIF   = core.getInput('EMAIL_NOTIF')
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    type: 'OAuth2',
     user: 'hachemico@gmail.com',
     pass: GMAIL_PASS // naturally, replace both with your real credentials or an application-specific password
   }
