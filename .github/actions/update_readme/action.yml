@@ -1,0 +1,9 @@
+name: 'update_readme'
+description: 'Update al badge del readme'
+inputs:
+  cypressTest:
+    description: 'Resultado Test'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

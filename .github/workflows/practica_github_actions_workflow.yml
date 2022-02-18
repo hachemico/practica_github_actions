@@ -35,3 +35,30 @@ jobs:
         with:
           name: result.txt
           path: result.txt
+
+    badgeJob:
+      runs-on: ubuntu-latest
+      if: always()
+      needs: cypressJob
+      steps:
+        - uses: actions/checkout@v2
+        - uses: actions/download-artifact@v2
+          with:
+            name: result.txt
+
+        - id: cypressTest
+          run: echo "::set-output name=cypressOutcome::$(cat result.txt)"
+        
+        - uses: ./.github/actions/update_readme/
+          id: readme
+          with:
+            cypressTest: ${{ steps.cypressTest.outputs.cypressOutcome }}
+        
+        - run: | 
+              git config user.email "hachemico@gmail.com"
+              git config user.name "hachemico"
+              git pull
+              git add .
+              git commit --allow-empty -m "Readme" 
+              git remote set-url origin https://hachemico:${{ secrets.GH_TOKEN }}@github.com/hachemico/practica_github_actions.git
+              git push  
