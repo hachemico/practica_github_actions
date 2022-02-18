@@ -1,20 +1,26 @@
 const core = require('@actions/core');
 const fs = require('fs');
 
-let resultado = core.getInput('cypressTest');
-let badge;
+let testResult = core.getInput('cypressTest');
+console.log(testResult)
+const successBadge = 'https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg';
+const failedBadge = 'https://img.shields.io/badge/test-failure-red.svg';
 
-resultado == 'success'
-                ? badge = '![Success](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)'
-                : badge = '![Failure](https://img.shields.io/badge/test-failure-red)'
-
-fs.readFile('README.md', 'utf8', function(err, data) {
+fs.readFile('README.md', 'utf-8', (err,data) => {
     if (err) {
-        return console.log(err);
+        return console.error(err)
     }
-    var result = data.replace(/(?<=\<!---Start place for the badge --\>\n)[^]+(?=\n\<!---End place for the badge  --\>)/g, badge);
-
-    fs.writeFile('README.md', result, 'utf8', function(err) {
-        if (err) return console.log(err);
-    });
-});
+    const markdownUpdate = data.replace(
+        /(?<=\[!\[Cypress.io\]\()[\s\S]*(?=\)\])/gm,
+        testResult == 'success' ? successBadge : failedBadge
+        
+    )
+    fs.writeFile('README.md', markdownUpdate, 'utf-8', (err) => {
+        if (err) {
+            
+            return console.error(err)
+        }
+        // console.log('Update Succes,okey');
+        console.log(markdownUpdate);
+    })
+})
