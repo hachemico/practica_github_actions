@@ -2,16 +2,36 @@ name: Practica Github Actions
 on: [push]
 jobs:
 
-  linter_job:
+  linterJob:
 
     runs-on: ubuntu-latest
+
+    steps:
+      -  uses: actions/checkout@v2
+      -  run: npm install
+      -  run: npm run lint
+
+  cypressJob:
+
+    runs-on: ubuntu-latest
+    needs: linterJob
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
     
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - id: cypress
+        uses: cypress-io/github-action@v2
+        continue-on-error: true
+        with:
+          config-file: cypress.json
+          build: npm run build
+          start: npm start
 
-      - name: Dependencias 
-        run: npm install
-      
-      - name: Init Linter
-        run: npm run lint
+      - run: echo ${{ steps.cypress.outcome }} > result.txt
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: result.txt
+          path: result.txt
