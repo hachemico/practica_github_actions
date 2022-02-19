@@ -161,6 +161,7 @@ Como vemos al realizar los tests de cypres, nos detecta que hay errores. Repasam
 
 <br>
 
+<hr>
 
 <a name="item4"></a>
 
@@ -168,7 +169,8 @@ Como vemos al realizar los tests de cypres, nos detecta que hay errores. Repasam
 
 #### CÓDIGO
 
-// CAPTURA CODIG BADGE
+![Captura de pantalla de 2022-02-18 18-10-40](https://user-images.githubusercontent.com/62303274/154801051-0bf4b887-6a29-43e3-9eea-7ca89b9df283.png)
+
 
 <br>
 
@@ -201,15 +203,16 @@ Como vemos al realizar los tests de cypres, nos detecta que hay errores. Repasam
  
  <br>
 
-//CAPTURA ACTION.YML
+![Captura de pantalla de 2022-02-18 18-31-43](https://user-images.githubusercontent.com/62303274/154801027-145fac44-7fb4-4701-988c-31c13c585e0e.png)
+
  
  <br>
 
  - Añadimos la ejecución del action, /dist/"index.js"
 
  <br>
-
-//CAPTURA INDEX.JS BADGE
+ 
+![Captura de pantalla de 2022-02-18 18-33-44](https://user-images.githubusercontent.com/62303274/154800992-f7e4464d-c250-4017-b918-46178eb81a6c.png)
 
 <br>
 
@@ -223,7 +226,7 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 <br>
 
-//CAPTURA RESULTADO BADGE
+![Captura de pantalla de 2022-02-18 18-29-34](https://user-images.githubusercontent.com/62303274/154800970-33d9d6a2-8a2f-45fa-9bff-c219d655c09a.png)
 
 <br>
 
@@ -248,7 +251,7 @@ Podemos ver el resultado de la Actualización del badge...
 
 #### CÓDIGO
 
-// CAPTURA CODIG VERCEL JOB
+![Captura de pantalla de 2022-02-19 13-33-32](https://user-images.githubusercontent.com/62303274/154800932-a0fc7081-75a7-4736-85a3-ae0dbe892620.png)
 
 <br>
 
@@ -274,7 +277,8 @@ Podemos ver el resultado de la Actualización del badge...
 
  <br>
 
-//CAPTURA SECRETS
+![Captura de pantalla de 2022-02-19 12-33-03](https://user-images.githubusercontent.com/62303274/154800897-01492a44-d3da-4284-93a6-5bd59de17dc5.png)
+
 
  <br>
  - Añadimos al repositorio 
@@ -287,7 +291,7 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 <br>
 
-// CAPTURA  PANTALLA 
+![Captura de pantalla de 2022-02-19 13-31-47](https://user-images.githubusercontent.com/62303274/154800881-921b40e9-9d72-4295-831f-9abfdcea4bfb.png)
 
 <br>
 
