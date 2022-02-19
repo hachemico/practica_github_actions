@@ -302,6 +302,10 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 <br>
 
+![Captura de pantalla de 2022-02-19 13-48-35](https://user-images.githubusercontent.com/62303274/154801484-b6510bbc-fc16-444f-8f66-249680ebcc62.png)
+
+<br>
+
 #### LINK VERCEL
 
 https://practica-github-actions-ten.vercel.app/
