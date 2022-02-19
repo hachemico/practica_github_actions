@@ -67,7 +67,7 @@ El workflow es un archivo tipo .yml, en el que se definen una serie de jobs, que
 
 #### CÓDIGO
 
-// CAPTURA CODIG LINTER
+![Captura de pantalla de 2022-02-19 13-38-16](https://user-images.githubusercontent.com/62303274/154801106-f262cfef-edca-4897-8426-c7cad7003356.png)
 
 <br>
 
@@ -92,15 +92,14 @@ El workflow es un archivo tipo .yml, en el que se definen una serie de jobs, que
 
 Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la ejecución del workflow.
 
-// CAPTURA  PANTALLA 
+![Captura de pantalla de 2022-02-18 10-42-54](https://user-images.githubusercontent.com/62303274/154801136-b6388e47-52cf-455b-ae27-8f70c664f74b.png)
 
 <br>
 Como vemos al aplicar el linter, nos detecta que hay errores. Repasamos el codigo hasta que la ejecución cumple con el Linter.
 
-
 <br>
 
-//CAPTURA RESULTADOS
+![Captura de pantalla de 2022-02-18 10-43-26](https://user-images.githubusercontent.com/62303274/154801142-b3eb3900-307e-4bc9-b88a-9c06845af8a9.png)
 
 <br>
 
@@ -112,7 +111,7 @@ Como vemos al aplicar el linter, nos detecta que hay errores. Repasamos el codig
 
 #### CÓDIGO
 
-// CAPTURA CODIG CYPRESS JOB
+![Captura de pantalla de 2022-02-18 11-16-43](https://user-images.githubusercontent.com/62303274/154801161-fd906505-e2c2-46e8-8e43-c74940e10c9f.png)
 
 <br>
 
@@ -138,6 +137,13 @@ Como vemos al aplicar el linter, nos detecta que hay errores. Repasamos el codig
 
  - Creamos un token en Github. Config/DeveloperSettings/Personals Token.
  - Añadimos el token como variable de entorno. Setting/Secrets/Actions
+
+<br>
+
+![Captura de pantalla de 2022-02-18 11-01-59](https://user-images.githubusercontent.com/62303274/154801269-2594bcba-c70a-4cce-8cbd-009b1bf2878b.png)
+
+<br>
+
  - Añadimos al repositorio  
                 
         => git add . 
@@ -150,14 +156,16 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 <br>
 
-//CAPTURA RESULTADOS
+
+![Captura de pantalla de 2022-02-18 11-16-26](https://user-images.githubusercontent.com/62303274/154801318-4109cefd-70d8-4720-801e-13649d41c915.png)
 
 <br>
+
 Como vemos al realizar los tests de cypres, nos detecta que hay errores. Repasamos el codigo, hasta encontrar el fallo.
 
 <br>
 
-// CAPTURA  PANTALLA 
+![Captura de pantalla de 2022-02-18 12-14-10](https://user-images.githubusercontent.com/62303274/154801210-b8d0875a-ff91-40d5-a83e-65951da4f6ab.png)
 
 <br>
 
@@ -170,7 +178,6 @@ Como vemos al realizar los tests de cypres, nos detecta que hay errores. Repasam
 #### CÓDIGO
 
 ![Captura de pantalla de 2022-02-18 18-10-40](https://user-images.githubusercontent.com/62303274/154801051-0bf4b887-6a29-43e3-9eea-7ca89b9df283.png)
-
 
 <br>
 
