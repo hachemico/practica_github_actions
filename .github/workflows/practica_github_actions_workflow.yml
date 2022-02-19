@@ -76,7 +76,7 @@ jobs:
           vercel-project-id: ${{ secrets.VPROJECT}}
 
   notificationJob:
-    needs: [linterJob, cypressJob, badgeJob, deployjob]
+    needs: [linterJob, cypressJob, badgeJob, deployJob]
     runs-on: ubuntu-latest
     if: always()
     steps:
