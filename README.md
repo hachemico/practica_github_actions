@@ -1,5 +1,9 @@
 # PRACTICA GITHUB ACTIONS 
-## ¿Que son las Github Actions ?!  ///CAPTURA LOGO GITHUB ACTIONS!
+
+![Captura de pantalla de 2022-02-18 20-13-34](https://user-images.githubusercontent.com/62303274/154800581-03c5dee2-4122-4649-a768-e6df7f3b3ef3.png)
+
+## ¿Que son las Github Actions ?! 
+
 
 
 GitHub Actions es una herramienta que permite reducir la cadena de acciones necesaria para la ejecución de código, mediante la creación de un de flujo de trabajo encargado del Pipeline. Siendo configurable para que GitHub reaccione a ciertos eventos de forma automática según nuestras preferencias.
@@ -47,7 +51,7 @@ A su vez, cada "Action" tendra un directorio "dist" donde ubicaremos aquello que
 
 #### CONCEPTO ESTRUCTURA
 
-//CAPTURA IMAGES ESTRUCTURA ARCHIVOS
+![Captura de pantalla de 2022-02-18 20-48-11](https://user-images.githubusercontent.com/62303274/154800615-5bf33ac3-7d96-43ab-937a-4d74f40c1730.png)
 
 <br>
 
@@ -287,8 +291,9 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 <br>
 
+#### LINK VERCEL
 
-<br>
+https://practica-github-actions-ten.vercel.app/
 
 <hr>
 
@@ -298,11 +303,12 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 #### CÓDIGO
 
-// CAPTURA CODIG NOTIFICATION JOB
+![Captura de pantalla de 2022-02-19 13-27-38](https://user-images.githubusercontent.com/62303274/154800741-9a5d7f6d-35b6-4091-b898-9dcbf2494d33.png)
 
 <br>
 
 #### DESCRIPCIÓN
+
 - runs-on => indica la version sobre la que trabajará.
 - needs => la ejecución se realizara despueś de que se hayan completado los jobs indicados.
 - steps =>
@@ -328,7 +334,6 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 <br>
 
 #### EJECUCION
-
  
  - Creamos un token en Gmail.
  - Guardamos email_to_notificate en Secrets. Setting/Secrets/Actions
@@ -336,7 +341,7 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
  <br>
 
-//CAPTURA SECRETS
+![Captura de pantalla de 2022-02-19 12-33-03](https://user-images.githubusercontent.com/62303274/154800710-cc8c89f3-bff5-445a-8a39-c2e118799014.png)
 
  <br>
  - Añadimos al repositorio  
@@ -347,13 +352,13 @@ Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la e
 
 Desde el repositorio de GitHub, vamos a la pestaña "Actions" donde aparece la ejecución del workflow.<br>
 
-
-// CAPTURA  PANTALLA 
+![Captura de pantalla de 2022-02-19 13-26-22](https://user-images.githubusercontent.com/62303274/154800704-ff53d0d4-06a7-4cc5-b9e8-3697b2f3237e.png)
 
 <br>
 Recibimos el correo con el resultado de la ejecución.
 <br>
 
-//CAPTURA CORREO.
+![Captura de pantalla de 2022-02-19 13-25-23](https://user-images.githubusercontent.com/62303274/154800662-57d30d64-0bb4-4fe6-b3b9-0736f383aa53.png)
+
 
 <br>
